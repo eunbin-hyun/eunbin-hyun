@@ -3,24 +3,12 @@
   <desc id="desc">A moving hand-drawn sketch of a camera, edge AI chip, and robot.</desc>
 
   <defs>
-    <filter id="paper" x="-5%" y="-10%" width="110%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="8" result="noise"/>
-      <feColorMatrix in="noise" type="saturate" values="0" result="grain"/>
-      <feComponentTransfer in="grain" result="fadedGrain">
-        <feFuncA type="table" tableValues="0 0.035"/>
-      </feComponentTransfer>
-      <feBlend in="SourceGraphic" in2="fadedGrain" mode="multiply"/>
-    </filter>
-    <filter id="rough" x="-10%" y="-15%" width="120%" height="130%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="14" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.1" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
     <style>
-      .ink { fill:none; stroke:#263442; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; filter:url(#rough); }
-      .thin { fill:none; stroke:#526575; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; filter:url(#rough); }
+      .ink { fill:none; stroke:#263442; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+      .thin { fill:none; stroke:#526575; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
       .label { font-family:"Segoe Print","Comic Sans MS",cursive; font-weight:700; fill:#263442; }
       .note { font-family:"Segoe Print","Comic Sans MS",cursive; fill:#61707d; }
-      .arrow { fill:none; stroke:#526575; stroke-width:3; stroke-linecap:round; stroke-dasharray:7 10; animation:dash 1s linear infinite; filter:url(#rough); }
+      .arrow { fill:none; stroke:#526575; stroke-width:3; stroke-linecap:round; stroke-dasharray:7 10; animation:dash 1s linear infinite; }
       .camera { animation:cameraWiggle 2.8s ease-in-out infinite; transform-origin:150px 118px; }
       .chip { animation:chipBreathe 2s ease-in-out infinite; transform-origin:450px 118px; }
       .robot { animation:robotBob 1.25s ease-in-out infinite; transform-origin:750px 145px; }
@@ -39,10 +27,6 @@
     </style>
   </defs>
 
-  <path d="M32 35 Q184 26 331 34 T625 31 T870 38 L866 207 Q706 218 550 209 T253 215 T35 205 Z" fill="#fffdf7" stroke="#d8d0c2" stroke-width="2" filter="url(#paper)"/>
-  <path d="M47 49 Q210 43 374 48 T701 45 T852 51" class="thin" opacity=".22"/>
-  <path d="M50 192 Q215 184 378 191 T700 188 T850 194" class="thin" opacity=".18"/>
-
   <path d="M238 119 C270 104 307 105 340 119" class="arrow"/>
   <path d="M331 110 l13 10 -14 8" class="thin"/>
   <path d="M560 119 C592 104 625 105 657 119" class="arrow"/>
@@ -58,10 +42,10 @@
   </circle>
 
   <g class="camera">
-    <path d="M83 88 Q82 78 94 77 L119 77 128 66 Q131 62 137 63 L171 64 Q177 64 180 69 L187 78 207 79 Q219 80 220 91 L218 147 Q218 157 207 158 L94 157 Q83 157 82 146 Z" fill="#fff8ee" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)"/>
+    <path d="M83 88 Q82 78 94 77 L119 77 128 66 Q131 62 137 63 L171 64 Q177 64 180 69 L187 78 207 79 Q219 80 220 91 L218 147 Q218 157 207 158 L94 157 Q83 157 82 146 Z" fill="#fff8ee" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M89 91 Q149 85 214 91" class="thin" opacity=".75"/>
-    <circle cx="151" cy="118" r="30" fill="#edf8fb" stroke="#263442" stroke-width="4" filter="url(#rough)"/>
-    <circle cx="151" cy="118" r="18" fill="none" stroke="#2f83a5" stroke-width="4" filter="url(#rough)"/>
+    <circle cx="151" cy="118" r="30" fill="#edf8fb" stroke="#263442" stroke-width="4"/>
+    <circle cx="151" cy="118" r="18" fill="none" stroke="#2f83a5" stroke-width="4"/>
     <circle cx="151" cy="118" r="6" fill="#2f83a5" class="signal"/>
     <path d="M111 73 q8-14 17-2" class="thin"/>
     <path d="M101 167 q47 8 99-1" class="thin" opacity=".55"/>
@@ -70,10 +54,10 @@
   <text x="150" y="185" text-anchor="middle" class="note" font-size="12">camera + sensors</text>
 
   <g class="chip">
-    <path d="M390 78 Q390 69 400 68 L501 69 Q510 69 510 79 L508 153 Q508 162 499 163 L400 161 Q390 161 391 152 Z" fill="#f0faf4" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)"/>
+    <path d="M390 78 Q390 69 400 68 L501 69 Q510 69 510 79 L508 153 Q508 162 499 163 L400 161 Q390 161 391 152 Z" fill="#f0faf4" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M374 88 l17 1 M373 108 l18 1 M374 130 l17 0 M374 150 l17 0 M509 89 l17-1 M509 109 l18 0 M509 131 l17 1 M508 151 l18 1" class="thin"/>
     <path d="M407 58 l1 11 M431 57 l0 12 M455 58 l0 11 M480 57 l-1 12 M502 59 l-1 10 M408 162 l0 12 M431 162 l1 12 M455 162 l0 12 M479 162 l1 12 M500 162 l0 12" class="thin"/>
-    <path d="M416 118 C426 91 443 143 451 111 S479 93 492 118" fill="none" stroke="#248a63" stroke-width="4" stroke-linecap="round" filter="url(#rough)"/>
+    <path d="M416 118 C426 91 443 143 451 111 S479 93 492 118" fill="none" stroke="#248a63" stroke-width="4" stroke-linecap="round"/>
     <circle cx="417" cy="118" r="4" fill="#248a63" class="signal"/>
     <circle cx="451" cy="111" r="4" fill="#248a63" class="signal" style="animation-delay:.3s"/>
     <circle cx="492" cy="118" r="4" fill="#248a63" class="signal" style="animation-delay:.6s"/>
@@ -82,7 +66,7 @@
   <text x="450" y="193" text-anchor="middle" class="note" font-size="12">edge AI + ROS 2</text>
 
   <g class="robot">
-    <path d="M695 137 Q699 102 711 88 Q733 78 775 85 Q794 91 804 136 Z" fill="#f6f1ff" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)"/>
+    <path d="M695 137 Q699 102 711 88 Q733 78 775 85 Q794 91 804 136 Z" fill="#f6f1ff" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M718 88 L718 70 Q718 63 726 63 L770 63 Q778 63 779 71 L779 87" class="ink"/>
     <path d="M748 63 L748 49" class="ink"/>
     <circle cx="748" cy="45" r="6" fill="#8b62c9" stroke="#263442" stroke-width="2">
