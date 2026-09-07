@@ -89,6 +89,10 @@
   </tr>
 </table>
 
+## 추가 프로젝트
+
+- **[SafePro+ ↗](https://github.com/eunbin-hyun/Worker_Safety_AI)** — MediaPipe·LSTM 자세 인식과 YOLOv8 안전모 탐지를 결합한 노동자 안전관리 프로토타입 · 6인 팀 · 담당: 프론트엔드, 아이디어 기획·발표, AI 구조 제안
+
 ## 제가 맡아 온 일
 
 - **Autonomous Navigation** — AprilTag 기하 기반 위치 추정, 왕복 경로 상태머신, FAULT/HOLD 안전 상태 설계
