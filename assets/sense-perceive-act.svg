@@ -3,9 +3,6 @@
   <desc id="desc">A clean hand-drawn camera, edge AI chip, and robot respond in sequence.</desc>
 
   <defs>
-    <filter id="softShadow" x="-20%" y="-25%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#3c4043" flood-opacity=".13"/>
-    </filter>
     <style>
       .ink { fill:none; stroke:#303640; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }
       .detail { fill:none; stroke:#67717e; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
@@ -15,19 +12,13 @@
       .stage-sense { animation:senseStep 6s cubic-bezier(.2,0,0,1) infinite; }
       .stage-think { animation:thinkStep 6s cubic-bezier(.2,0,0,1) infinite; }
       .stage-act { animation:actStep 6s cubic-bezier(.2,0,0,1) infinite; }
-      .halo-sense { animation:haloSense 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
-      .halo-think { animation:haloThink 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
-      .halo-act { animation:haloAct 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
       .robot-ink { fill:none; stroke:#75569d; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }
       .robot-detail { fill:none; stroke:#9678b7; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
       @keyframes senseStep { 0%,24%,100%{transform:translateY(0)} 7%,15%{transform:translateY(-4px)} }
       @keyframes thinkStep { 0%,30%,58%,100%{transform:translateY(0)} 39%,49%{transform:translateY(-4px)} }
       @keyframes actStep { 0%,64%,92%,100%{transform:translate(0,0)} 73%{transform:translate(4px,-3px)} 82%{transform:translate(8px,0)} }
-      @keyframes haloSense { 0%,25%,100%{opacity:0;transform:scale(.9)} 8%,16%{opacity:.75;transform:scale(1)} }
-      @keyframes haloThink { 0%,32%,58%,100%{opacity:0;transform:scale(.9)} 40%,49%{opacity:.75;transform:scale(1)} }
-      @keyframes haloAct { 0%,66%,92%,100%{opacity:0;transform:scale(.9)} 74%,83%{opacity:.75;transform:scale(1)} }
       @media (prefers-reduced-motion:reduce) {
-        .stage,.halo-sense,.halo-think,.halo-act { animation:none; }
+        .stage { animation:none; }
       }
     </style>
   </defs>
@@ -40,9 +31,6 @@
 
   <!-- stage 1: sense -->
   <g class="stage stage-sense">
-    <ellipse class="halo-sense" cx="150" cy="113" rx="100" ry="82" fill="#d2e3fc"/>
-    <path d="M102 46 C79 47 66 65 68 89 L70 146 C71 168 89 181 112 180 L198 179 C221 178 234 160 231 138 L229 80 C228 58 211 45 188 46 Z" fill="#e8f0fe" filter="url(#softShadow)"/>
-    <path d="M102 46 C79 47 66 65 68 89 L70 146 C71 168 89 181 112 180 L198 179 C221 178 234 160 231 138 L229 80 C228 58 211 45 188 46 Z" fill="none" stroke="#4285f4" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".18" transform="translate(2 -1)"/>
     <path d="M91 96 Q91 86 101 86 L124 86 132 76 Q136 71 142 72 L168 73 Q175 73 178 79 L183 86 201 87 Q210 87 210 97 L208 143 Q208 152 198 152 L102 151 Q92 151 92 142 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="150" cy="119" r="26" fill="#e8f0fe" stroke="#303640" stroke-width="3.5"/>
     <circle cx="150" cy="119" r="14" fill="none" stroke="#4285f4" stroke-width="3.5"/>
@@ -60,9 +48,6 @@
 
   <!-- stage 2: perceive -->
   <g class="stage stage-think">
-    <ellipse class="halo-think" cx="450" cy="113" rx="100" ry="82" fill="#ceead6"/>
-    <path d="M402 45 C379 46 366 63 368 87 L369 145 C369 168 388 181 410 180 L499 179 C521 178 534 160 532 137 L530 81 C530 59 513 45 490 46 Z" fill="#e6f4ea" filter="url(#softShadow)"/>
-    <path d="M402 45 C379 46 366 63 368 87 L369 145 C369 168 388 181 410 180 L499 179 C521 178 534 160 532 137 L530 81 C530 59 513 45 490 46 Z" fill="none" stroke="#34a853" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".18" transform="translate(-2 1)"/>
     <path d="M404 82 Q404 75 412 75 L489 76 Q497 76 497 84 L496 146 Q496 153 488 153 L412 152 Q404 152 405 145 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M393 91h12 M393 109h12 M393 128h12 M393 145h12 M496 91h12 M496 109h12 M496 128h12 M496 145h12 M417 64v12 M438 64v12 M460 64v12 M482 65v11 M417 153v12 M438 153v12 M460 153v12 M482 153v12" class="detail"/>
     <path d="M423 120 C431 94 444 139 451 111 S475 96 487 120" fill="none" stroke="#34a853" stroke-width="3.5" stroke-linecap="round">
@@ -87,9 +72,6 @@
 
   <!-- stage 3: act -->
   <g class="stage stage-act">
-    <ellipse class="halo-act" cx="750" cy="113" rx="100" ry="82" fill="#e4d7f5"/>
-    <path d="M702 46 C679 47 666 65 668 89 L670 146 C671 168 689 181 712 180 L798 179 C821 178 834 160 831 138 L829 80 C828 58 811 45 788 46 Z" fill="#f3e8fd" filter="url(#softShadow)"/>
-    <path d="M702 46 C679 47 666 65 668 89 L670 146 C671 168 689 181 712 180 L798 179 C821 178 834 160 831 138 L829 80 C828 58 811 45 788 46 Z" fill="none" stroke="#a142f4" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".18" transform="translate(2 1)"/>
     <path d="M703 139 Q706 112 720 100 Q744 89 777 97 Q793 106 799 139 Z" fill="#ffffff" stroke="#75569d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M725 99 V88 Q725 81 733 80 L770 81 Q778 81 779 89 V99" class="robot-ink"/>
     <path d="M735 80 Q751 74 770 81" class="robot-detail" opacity=".7"/>
