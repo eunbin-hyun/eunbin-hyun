@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/sense-perceive-act-v4.svg" width="820" alt="센서 입력이 엣지 AI 추론을 거쳐 로봇 동작으로 이어지는 애니메이션" />
+  <img src="./assets/sense-perceive-act-v5.svg" width="820" alt="센서 입력이 엣지 AI 추론을 거쳐 로봇 동작으로 이어지는 애니메이션" />
 </p>
 
 <p align="center">

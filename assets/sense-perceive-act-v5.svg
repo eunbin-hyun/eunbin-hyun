@@ -14,11 +14,21 @@
       .stage-act { animation:actStep 6s cubic-bezier(.2,0,0,1) infinite; }
       .robot-ink { fill:none; stroke:#75569d; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
       .robot-detail { fill:none; stroke:#8665aa; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
+      .act-label { fill:#75569d; }
       @keyframes senseStep { 0%,24%,100%{transform:translateY(0)} 7%,15%{transform:translateY(-4px)} }
       @keyframes thinkStep { 0%,30%,58%,100%{transform:translateY(0)} 39%,49%{transform:translateY(-4px)} }
       @keyframes actStep { 0%,64%,92%,100%{transform:translate(0,0)} 73%{transform:translate(4px,-3px)} 82%{transform:translate(8px,0)} }
       @media (prefers-reduced-motion:reduce) {
         .stage { animation:none; }
+      }
+      @media (prefers-color-scheme:dark) {
+        .ink { stroke:#d7dee8; }
+        .detail { stroke:#9da8b5; }
+        .hand { fill:#d7dee8; }
+        .caption { fill:#aeb8c4; }
+        .robot-ink { stroke:#b68de3; }
+        .robot-detail { stroke:#c19de8; }
+        .act-label { fill:#c19de8; }
       }
     </style>
   </defs>
@@ -90,6 +100,6 @@
       <animate attributeName="opacity" values=".15;.15;.65;.15;.15" keyTimes="0;.67;.77;.9;1" dur="6s" repeatCount="indefinite"/>
     </path>
   </g>
-  <text x="750" y="30" text-anchor="middle" class="hand" font-size="19" style="fill:#75569d">act!</text>
+  <text x="750" y="30" text-anchor="middle" class="hand act-label" font-size="19">act!</text>
   <text x="750" y="211" text-anchor="middle" class="caption" font-size="11">ROBOT MOTION</text>
 </svg>
