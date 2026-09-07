@@ -50,21 +50,23 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <sub>AUTONOMOUS ROBOT · ROS 2</sub>
+      <sub>AUTONOMOUS ROBOT · ROS 2 / 2026.07–08 · 6인 팀</sub>
       <h3><a href="https://github.com/eunbin-hyun/AprilTag_Nav_Security_Robot">SSACURITY ↗</a></h3>
       <p><strong>AprilTag 기반 셔틀 승강장 보안 로봇</strong></p>
       <p>Jetson에서 AprilTag 위치 추정과 왕복 경로 상태머신을 구현하고 STM32 UART·관제 WebSocket을 연결했습니다.</p>
       <p><strong>담당:</strong> Jetson · AprilTag 자율주행 · 관제 연동</p>
       <p><code>ROS 2</code> · <code>Jetson</code> · <code>AprilTag</code> · <code>UART</code></p>
       <p>핵심 순수 로직 테스트 <strong>243 passed</strong> · 폐루프 E2E <strong>5/5</strong></p>
+      <p><a href="https://github.com/eunbin-hyun/AprilTag_Nav_Security_Robot/tree/main/hardware/jetson/ros2_ws">Jetson 구현 보기 ↗</a></p>
     </td>
     <td width="50%" valign="top">
-      <sub>SMART FACTORY · DIGITAL TWIN</sub>
+      <sub>SMART FACTORY · DIGITAL TWIN / 2026.06 · 2인 팀</sub>
       <h3><a href="https://github.com/SSAFY-15th-HK/AQIS-for-SmartFactory">AQIS ↗</a></h3>
       <p><strong>AI 품질 검사 스마트팩토리</strong></p>
       <p>RoboDK 디지털 트윈과 Simulation Dashboard를 만들고, 3D 설계·Roboflow 데이터·YOLO 학습을 담당했습니다.</p>
       <p><strong>담당:</strong> Simulation · AI · 3D</p>
       <p><code>RoboDK</code> · <code>YOLOv5</code> · <code>Onshape</code> · <code>React</code></p>
+      <p><a href="https://github.com/SSAFY-15th-HK/AQIS-for-SmartFactory/tree/main/AQIS-sim">시뮬레이션 구현 보기 ↗</a></p>
     </td>
   </tr>
   <tr>
@@ -72,18 +74,20 @@
       <sub>EDGE AI · MODEL OPTIMIZATION</sub>
       <h3><a href="https://github.com/eunbin-hyun/tangerine_pests_AI">Tangerine Pests AI ↗</a></h3>
       <p><strong>감귤 병해충 탐지·방제 로봇</strong></p>
-      <p>YOLOv8 학습 모델을 ONNX와 HAR로 변환하고 PTQ 최적화 후 Hailo-8L용 HEF로 컴파일했습니다.</p>
+      <p>YOLOv8 학습 모델을 ONNX와 HAR로 변환하고, 학습 후 양자화(PTQ)·최적화를 거쳐 Hailo-8L용 HEF로 컴파일했습니다.</p>
       <p><strong>담당:</strong> 데이터 · 모델 학습 · NPU 배포 · 하드웨어 통합</p>
       <p><code>YOLOv8</code> · <code>Hailo DFC</code> · <code>ONNX</code> · <code>Raspberry Pi 5</code></p>
+      <p><a href="https://github.com/eunbin-hyun/tangerine_pests_AI#ai-양자화와-hef-배포">양자화·HEF 배포 과정 보기 ↗</a></p>
     </td>
     <td width="50%" valign="top">
       <sub>COMPUTER VISION · SEGMENTATION</sub>
-      <h3><a href="https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation">Night & Rain Lane ↗</a></h3>
+      <h3><a href="https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation">Night &amp; Rain Lane ↗</a></h3>
       <p><strong>야간·우천 차선 분할 시스템</strong></p>
       <p>편광필름과 CLAHE로 반사광·저조도 문제를 완화하고 YOLO11n-seg를 Raspberry Pi에 통합했습니다.</p>
       <p><strong>담당:</strong> 팀장 · 데이터 · 모델 학습 · 임베디드 추론</p>
       <p><code>YOLO11</code> · <code>OpenCV</code> · <code>CLAHE</code> · <code>Picamera2</code></p>
-      <p>기존 모델 대비 Recall <strong>+28.7%p</strong> · mAP50 <strong>+11.2%p</strong></p>
+      <p>기존 모델 대비 Recall <strong>28.7% ↑</strong> · mAP50 <strong>11.2% ↑</strong></p>
+      <p><a href="https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation/blob/main/main_clahe.py">전처리·추론 코드 보기 ↗</a></p>
     </td>
   </tr>
 </table>
@@ -104,15 +108,15 @@
 
 | 연도 | 구분 | 내용 |
 |---|---|---|
-| 2025 | 논문 | 한국전기전자학회 하계학술대회 제1저자 — 야간 및 악천후 환경에서의 딥러닝 기반 실시간 차선 인식 시스템 |
+| 2025 | 논문 | 한국전기전자학회 하계학술대회 제1저자 — [야간 및 악천후 환경에서의 딥러닝 기반 실시간 차선 인식 시스템 ↗](https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation/tree/main/docs) |
 | 2025 | 수상 | 2025-1학기 캡스톤디자인 결과발표회 우수상 |
-| 2025 | 특허 | 감귤 병충해 실시간 진단 및 예방 장치 출원 (`10-2025-0016861`) |
+| 2025 | 특허 | [감귤 병충해 실시간 진단 및 예방 장치 ↗](https://github.com/eunbin-hyun/tangerine_pests_AI/tree/main/docs) 출원 (`10-2025-0016861`) |
 | 2024 | 수상 | 제32회 설계 및 팀프로젝트 작품전시회 최우수상 |
 | 2024 | 수상 | IP 창의발명 경진대회 동상 · 캡스톤디자인 결과발표회 장려상 |
 
 ## 학습 기록
 
-- [AlgorithmTest_practice](https://github.com/eunbin-hyun/AlgorithmTest_practice) — 백준 알고리즘 풀이 기록
+- [AlgorithmTest_practice](https://github.com/eunbin-hyun/AlgorithmTest_practice) — 백준·프로그래머스·SWEA·Codetree 문제 풀이
 - [CodeUp_Algorithm](https://github.com/eunbin-hyun/CodeUp_Algorithm) — CodeUp 문제 풀이
 - [studyPy](https://github.com/eunbin-hyun/studyPy) · [Pyton_Team_Notes](https://github.com/eunbin-hyun/Pyton_Team_Notes) — Python 학습과 팀 노트
 
