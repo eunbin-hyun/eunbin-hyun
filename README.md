@@ -20,7 +20,6 @@
   <img src="https://img.shields.io/badge/ROS%202-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS 2" height="28" />
   <img src="https://img.shields.io/badge/Jetson-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA Jetson" height="28" />
   <img src="https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi" height="28" />
-  <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" alt="STM32" height="28" />
 </p>
 
 <p align="center">
@@ -37,6 +36,8 @@
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" height="28" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" height="28" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=111111" alt="Linux" height="28" />
+  <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira" height="28" />
+  <img src="https://img.shields.io/badge/MATLAB-E95420?style=for-the-badge" alt="MATLAB" height="28" />
   <img src="https://img.shields.io/badge/RoboDK-1F2937?style=for-the-badge" alt="RoboDK" height="28" />
   <img src="https://img.shields.io/badge/Hailo--8L-00AEEF?style=for-the-badge" alt="Hailo-8L" height="28" />
 </p>
