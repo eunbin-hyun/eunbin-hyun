@@ -3,16 +3,57 @@
   <desc id="desc">A clean hand-drawn camera, edge AI chip, and robot respond in sequence.</desc>
 
   <defs>
+    <linearGradient id="blueShine" x1="-80%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0" stop-color="#1a73e8"/>
+      <stop offset=".46" stop-color="#4da3ff"/>
+      <stop offset=".58" stop-color="#a8d8ff"/>
+      <stop offset=".72" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1a73e8"/>
+      <animate attributeName="x1" values="-80%;80%;-80%" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="20%;180%;20%" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="greenShine" x1="-80%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0" stop-color="#188038"/>
+      <stop offset=".46" stop-color="#34a853"/>
+      <stop offset=".58" stop-color="#9be7b2"/>
+      <stop offset=".72" stop-color="#1e8e3e"/>
+      <stop offset="1" stop-color="#188038"/>
+      <animate attributeName="x1" values="-80%;80%;-80%" dur="5s" begin=".5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="20%;180%;20%" dur="5s" begin=".5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="purpleShine" x1="-80%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0" stop-color="#7147a7"/>
+      <stop offset=".46" stop-color="#a142f4"/>
+      <stop offset=".58" stop-color="#d8b4fe"/>
+      <stop offset=".72" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#7147a7"/>
+      <animate attributeName="x1" values="-80%;80%;-80%" dur="5s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="20%;180%;20%" dur="5s" begin="1s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.25" result="blur"/>
+      <feComponentTransfer in="blur" result="softBlur">
+        <feFuncA type="linear" slope=".34"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="softBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     <style>
       .ink { fill:none; stroke:#303640; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }
       .detail { fill:none; stroke:#67717e; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
+      .sense-ink { fill:none; stroke:url(#blueShine); stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; filter:url(#lineGlow); }
+      .sense-detail { fill:none; stroke:#5b8fbd; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
+      .think-ink { fill:none; stroke:url(#greenShine); stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; filter:url(#lineGlow); }
+      .think-detail { fill:none; stroke:#58916b; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
       .hand { font-family:"Segoe Print","Comic Sans MS",cursive; font-weight:700; fill:#303640; }
       .caption { font-family:"Segoe UI",Arial,sans-serif; font-weight:600; fill:#7a838d; letter-spacing:1.2px; }
       .stage { transform-box:fill-box; transform-origin:center; }
       .stage-sense { animation:senseStep 6s cubic-bezier(.2,0,0,1) infinite; }
       .stage-think { animation:thinkStep 6s cubic-bezier(.2,0,0,1) infinite; }
       .stage-act { animation:actStep 6s cubic-bezier(.2,0,0,1) infinite; }
-      .robot-ink { fill:none; stroke:#75569d; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }
+      .robot-ink { fill:none; stroke:url(#purpleShine); stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; filter:url(#lineGlow); }
       .robot-detail { fill:none; stroke:#9678b7; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
       @keyframes senseStep { 0%,24%,100%{transform:translateY(0)} 7%,15%{transform:translateY(-4px)} }
       @keyframes thinkStep { 0%,30%,58%,100%{transform:translateY(0)} 39%,49%{transform:translateY(-4px)} }
@@ -31,65 +72,65 @@
 
   <!-- stage 1: sense -->
   <g class="stage stage-sense">
-    <path d="M91 96 Q91 86 101 86 L124 86 132 76 Q136 71 142 72 L168 73 Q175 73 178 79 L183 86 201 87 Q210 87 210 97 L208 143 Q208 152 198 152 L102 151 Q92 151 92 142 Z" fill="none" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="150" cy="119" r="26" fill="none" stroke="#303640" stroke-width="3.5"/>
-    <circle cx="150" cy="119" r="14" fill="none" stroke="#4285f4" stroke-width="3.5"/>
-    <circle cx="150" cy="119" r="5" fill="#4285f4">
+    <path d="M91 96 Q91 86 101 86 L124 86 132 76 Q136 71 142 72 L168 73 Q175 73 178 79 L183 86 201 87 Q210 87 210 97 L208 143 Q208 152 198 152 L102 151 Q92 151 92 142 Z" class="sense-ink"/>
+    <circle cx="150" cy="119" r="26" class="sense-ink"/>
+    <circle cx="150" cy="119" r="14" class="sense-ink"/>
+    <circle cx="150" cy="119" r="5" fill="url(#blueShine)">
       <animate attributeName="r" values="5;5;8;5;5" keyTimes="0;.07;.12;.18;1" dur="6s" repeatCount="indefinite"/>
     </circle>
-    <path d="M109 82 q7-11 15-2" class="detail"/>
-    <path d="M109 163 q41 7 83-1" fill="none" stroke="#4285f4" stroke-width="2" stroke-linecap="round" stroke-opacity=".28"/>
-    <path d="M82 69 l-8-7 M88 61 l-2-10 M215 67 l8-8" class="detail" opacity=".38">
+    <path d="M109 82 q7-11 15-2" class="sense-detail"/>
+    <path d="M109 163 q41 7 83-1" fill="none" stroke="url(#blueShine)" stroke-width="2" stroke-linecap="round" stroke-opacity=".65"/>
+    <path d="M82 69 l-8-7 M88 61 l-2-10 M215 67 l8-8" class="sense-detail" opacity=".38">
       <animate attributeName="opacity" values=".15;.65;.15;.15" keyTimes="0;.1;.22;1" dur="6s" repeatCount="indefinite"/>
     </path>
   </g>
-  <text x="150" y="30" text-anchor="middle" class="hand" font-size="19">sense</text>
+  <text x="150" y="30" text-anchor="middle" class="hand" font-size="19" style="fill:url(#blueShine)">sense</text>
   <text x="150" y="211" text-anchor="middle" class="caption" font-size="11">CAMERA · SENSOR</text>
 
   <!-- stage 2: perceive -->
   <g class="stage stage-think">
-    <path d="M404 82 Q404 75 412 75 L489 76 Q497 76 497 84 L496 146 Q496 153 488 153 L412 152 Q404 152 405 145 Z" fill="none" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M393 91h12 M393 109h12 M393 128h12 M393 145h12 M496 91h12 M496 109h12 M496 128h12 M496 145h12 M417 64v12 M438 64v12 M460 64v12 M482 65v11 M417 153v12 M438 153v12 M460 153v12 M482 153v12" class="detail"/>
-    <path d="M423 120 C431 94 444 139 451 111 S475 96 487 120" fill="none" stroke="#34a853" stroke-width="3.5" stroke-linecap="round">
+    <path d="M404 82 Q404 75 412 75 L489 76 Q497 76 497 84 L496 146 Q496 153 488 153 L412 152 Q404 152 405 145 Z" class="think-ink"/>
+    <path d="M393 91h12 M393 109h12 M393 128h12 M393 145h12 M496 91h12 M496 109h12 M496 128h12 M496 145h12 M417 64v12 M438 64v12 M460 64v12 M482 65v11 M417 153v12 M438 153v12 M460 153v12 M482 153v12" class="think-detail"/>
+    <path d="M423 120 C431 94 444 139 451 111 S475 96 487 120" class="think-ink">
       <animate attributeName="stroke-dasharray" values="0 150;0 150;150 0;150 0" keyTimes="0;.34;.52;1" dur="6s" repeatCount="indefinite"/>
     </path>
-    <circle cx="423" cy="120" r="4" fill="#34a853">
+    <circle cx="423" cy="120" r="4" fill="url(#greenShine)">
       <animate attributeName="opacity" values=".25;.25;1;.25;.25" keyTimes="0;.35;.39;.53;1" dur="6s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="451" cy="111" r="4" fill="#34a853">
+    <circle cx="451" cy="111" r="4" fill="url(#greenShine)">
       <animate attributeName="opacity" values=".25;.25;1;.25;.25" keyTimes="0;.39;.43;.53;1" dur="6s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="487" cy="120" r="4" fill="#34a853">
+    <circle cx="487" cy="120" r="4" fill="url(#greenShine)">
       <animate attributeName="opacity" values=".25;.25;1;.25;.25" keyTimes="0;.43;.47;.53;1" dur="6s" repeatCount="indefinite"/>
     </circle>
-    <path d="M407 169 q43 6 88-1" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-opacity=".28"/>
-    <path d="M381 66 l-8-8 M388 59 l-2-10 M518 66 l8-8" class="detail" opacity=".28">
+    <path d="M407 169 q43 6 88-1" fill="none" stroke="url(#greenShine)" stroke-width="2" stroke-linecap="round" stroke-opacity=".65"/>
+    <path d="M381 66 l-8-8 M388 59 l-2-10 M518 66 l8-8" class="think-detail" opacity=".28">
       <animate attributeName="opacity" values=".15;.15;.65;.15;.15" keyTimes="0;.33;.43;.56;1" dur="6s" repeatCount="indefinite"/>
     </path>
   </g>
-  <text x="450" y="30" text-anchor="middle" class="hand" font-size="19">perceive</text>
+  <text x="450" y="30" text-anchor="middle" class="hand" font-size="19" style="fill:url(#greenShine)">perceive</text>
   <text x="450" y="211" text-anchor="middle" class="caption" font-size="11">EDGE AI · ROS 2</text>
 
   <!-- stage 3: act -->
   <g class="stage stage-act">
-    <path d="M703 139 Q706 112 720 100 Q744 89 777 97 Q793 106 799 139 Z" fill="none" stroke="#75569d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M703 139 Q706 112 720 100 Q744 89 777 97 Q793 106 799 139 Z" class="robot-ink"/>
     <path d="M725 99 V88 Q725 81 733 80 L770 81 Q778 81 779 89 V99" class="robot-ink"/>
     <path d="M735 80 Q751 74 770 81" class="robot-detail" opacity=".7"/>
-    <circle cx="723" cy="147" r="15" fill="none" stroke="#75569d" stroke-width="3.5"/>
-    <circle cx="779" cy="147" r="15" fill="none" stroke="#75569d" stroke-width="3.5"/>
-    <circle cx="723" cy="147" r="5" fill="#a142f4"/>
-    <circle cx="779" cy="147" r="5" fill="#a142f4"/>
-    <circle cx="735" cy="116" r="4" fill="#a142f4"/>
-    <circle cx="770" cy="116" r="4" fill="#a142f4"/>
+    <circle cx="723" cy="147" r="15" class="robot-ink"/>
+    <circle cx="779" cy="147" r="15" class="robot-ink"/>
+    <circle cx="723" cy="147" r="5" fill="url(#purpleShine)"/>
+    <circle cx="779" cy="147" r="5" fill="url(#purpleShine)"/>
+    <circle cx="735" cy="116" r="4" fill="url(#purpleShine)"/>
+    <circle cx="770" cy="116" r="4" fill="url(#purpleShine)"/>
     <path d="M740 128 q12 7 24 0" class="robot-detail"/>
     <path d="M808 119 q14-6 23 1 M809 131 q16-3 25 4" class="robot-detail">
       <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.7;.78;.9;1" dur="6s" repeatCount="indefinite"/>
     </path>
-    <path d="M707 169 q42 6 87-1" fill="none" stroke="#a142f4" stroke-width="2" stroke-linecap="round" stroke-opacity=".28"/>
+    <path d="M707 169 q42 6 87-1" fill="none" stroke="url(#purpleShine)" stroke-width="2" stroke-linecap="round" stroke-opacity=".65"/>
     <path d="M682 69 l-8-7 M688 61 l-2-10 M816 67 l8-8" class="detail" opacity=".28">
       <animate attributeName="opacity" values=".15;.15;.65;.15;.15" keyTimes="0;.67;.77;.9;1" dur="6s" repeatCount="indefinite"/>
     </path>
   </g>
-  <text x="750" y="30" text-anchor="middle" class="hand" font-size="19" style="fill:#75569d">act!</text>
+  <text x="750" y="30" text-anchor="middle" class="hand" font-size="19" style="fill:url(#purpleShine)">act!</text>
   <text x="750" y="211" text-anchor="middle" class="caption" font-size="11">ROBOT MOTION</text>
 </svg>
