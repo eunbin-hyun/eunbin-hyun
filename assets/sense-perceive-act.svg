@@ -51,7 +51,8 @@
   <!-- stage 1: sense -->
   <g class="stage stage-sense">
     <ellipse class="halo-sense" cx="150" cy="113" rx="100" ry="82" fill="#d2e3fc"/>
-    <rect x="67" y="45" width="166" height="136" rx="42" fill="#e8f0fe" filter="url(#softShadow)"/>
+    <path d="M102 46 C79 47 66 65 68 89 L70 146 C71 168 89 181 112 180 L198 179 C221 178 234 160 231 138 L229 80 C228 58 211 45 188 46 Z" fill="#e8f0fe" filter="url(#softShadow)"/>
+    <path d="M102 46 C79 47 66 65 68 89 L70 146 C71 168 89 181 112 180 L198 179 C221 178 234 160 231 138 L229 80 C228 58 211 45 188 46 Z" fill="none" stroke="#4285f4" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".18" transform="translate(2 -1)"/>
     <path d="M91 96 Q91 86 101 86 L124 86 132 76 Q136 71 142 72 L168 73 Q175 73 178 79 L183 86 201 87 Q210 87 210 97 L208 143 Q208 152 198 152 L102 151 Q92 151 92 142 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="150" cy="119" r="26" fill="#e8f0fe" stroke="#303640" stroke-width="3.5"/>
     <circle cx="150" cy="119" r="14" fill="none" stroke="#4285f4" stroke-width="3.5"/>
@@ -59,6 +60,10 @@
       <animate attributeName="r" values="5;5;8;5;5" keyTimes="0;.07;.12;.18;1" dur="6s" repeatCount="indefinite"/>
     </circle>
     <path d="M109 82 q7-11 15-2" class="detail"/>
+    <path d="M109 163 q41 7 83-1" fill="none" stroke="#4285f4" stroke-width="2" stroke-linecap="round" stroke-opacity=".28"/>
+    <path d="M82 69 l-8-7 M88 61 l-2-10 M215 67 l8-8" class="detail" opacity=".38">
+      <animate attributeName="opacity" values=".15;.65;.15;.15" keyTimes="0;.1;.22;1" dur="6s" repeatCount="indefinite"/>
+    </path>
   </g>
   <text x="150" y="30" text-anchor="middle" class="hand" font-size="19">sense</text>
   <text x="150" y="211" text-anchor="middle" class="caption" font-size="11">CAMERA · SENSOR</text>
@@ -66,7 +71,8 @@
   <!-- stage 2: perceive -->
   <g class="stage stage-think">
     <ellipse class="halo-think" cx="450" cy="113" rx="100" ry="82" fill="#ceead6"/>
-    <rect x="367" y="45" width="166" height="136" rx="42" fill="#e6f4ea" filter="url(#softShadow)"/>
+    <path d="M402 45 C379 46 366 63 368 87 L369 145 C369 168 388 181 410 180 L499 179 C521 178 534 160 532 137 L530 81 C530 59 513 45 490 46 Z" fill="#e6f4ea" filter="url(#softShadow)"/>
+    <path d="M402 45 C379 46 366 63 368 87 L369 145 C369 168 388 181 410 180 L499 179 C521 178 534 160 532 137 L530 81 C530 59 513 45 490 46 Z" fill="none" stroke="#34a853" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".18" transform="translate(-2 1)"/>
     <path d="M404 82 Q404 75 412 75 L489 76 Q497 76 497 84 L496 146 Q496 153 488 153 L412 152 Q404 152 405 145 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M393 91h12 M393 109h12 M393 128h12 M393 145h12 M496 91h12 M496 109h12 M496 128h12 M496 145h12 M417 64v12 M438 64v12 M460 64v12 M482 65v11 M417 153v12 M438 153v12 M460 153v12 M482 153v12" class="detail"/>
     <path d="M423 120 C431 94 444 139 451 111 S475 96 487 120" fill="none" stroke="#34a853" stroke-width="3.5" stroke-linecap="round">
@@ -81,6 +87,10 @@
     <circle cx="487" cy="120" r="4" fill="#34a853">
       <animate attributeName="opacity" values=".25;.25;1;.25;.25" keyTimes="0;.43;.47;.53;1" dur="6s" repeatCount="indefinite"/>
     </circle>
+    <path d="M407 169 q43 6 88-1" fill="none" stroke="#34a853" stroke-width="2" stroke-linecap="round" stroke-opacity=".28"/>
+    <path d="M381 66 l-8-8 M388 59 l-2-10 M518 66 l8-8" class="detail" opacity=".28">
+      <animate attributeName="opacity" values=".15;.15;.65;.15;.15" keyTimes="0;.33;.43;.56;1" dur="6s" repeatCount="indefinite"/>
+    </path>
   </g>
   <text x="450" y="30" text-anchor="middle" class="hand" font-size="19">perceive</text>
   <text x="450" y="211" text-anchor="middle" class="caption" font-size="11">EDGE AI · ROS 2</text>
@@ -88,7 +98,8 @@
   <!-- stage 3: act -->
   <g class="stage stage-act">
     <ellipse class="halo-act" cx="750" cy="113" rx="100" ry="82" fill="#e4d7f5"/>
-    <rect x="667" y="45" width="166" height="136" rx="42" fill="#f3e8fd" filter="url(#softShadow)"/>
+    <path d="M702 46 C679 47 666 65 668 89 L670 146 C671 168 689 181 712 180 L798 179 C821 178 834 160 831 138 L829 80 C828 58 811 45 788 46 Z" fill="#f3e8fd" filter="url(#softShadow)"/>
+    <path d="M702 46 C679 47 666 65 668 89 L670 146 C671 168 689 181 712 180 L798 179 C821 178 834 160 831 138 L829 80 C828 58 811 45 788 46 Z" fill="none" stroke="#a142f4" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".18" transform="translate(2 1)"/>
     <path d="M703 141 Q707 109 718 96 Q741 88 777 95 Q794 102 799 140 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M725 96 V81 Q725 74 733 74 H770 Q778 74 779 82 V96 M751 74V61" class="ink"/>
     <circle cx="751" cy="58" r="5" fill="#a142f4">
@@ -101,6 +112,10 @@
     <path d="M740 128 q12 7 24 0" class="detail"/>
     <path d="M808 119 q14-6 23 1 M809 131 q16-3 25 4" class="detail">
       <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.7;.78;.9;1" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M707 169 q42 6 87-1" fill="none" stroke="#a142f4" stroke-width="2" stroke-linecap="round" stroke-opacity=".28"/>
+    <path d="M682 69 l-8-7 M688 61 l-2-10 M816 67 l8-8" class="detail" opacity=".28">
+      <animate attributeName="opacity" values=".15;.15;.65;.15;.15" keyTimes="0;.67;.77;.9;1" dur="6s" repeatCount="indefinite"/>
     </path>
   </g>
   <text x="750" y="30" text-anchor="middle" class="hand" font-size="19">act!</text>
