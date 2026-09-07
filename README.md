@@ -6,10 +6,6 @@
 </p>
 
 <p align="center">
-  <img src="./assets/hero-sketch.svg" width="760" alt="카메라 입력, 엣지 AI 추론, 로봇 제어로 이어지는 현은빈의 개발 흐름" />
-</p>
-
-<p align="center">
   <a href="./RESUME.md"><strong>이력서 보기</strong></a>
   &nbsp;·&nbsp;
   <a href="https://github.com/eunbin-hyun?tab=repositories"><strong>전체 저장소</strong></a>
