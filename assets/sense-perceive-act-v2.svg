@@ -31,8 +31,8 @@
 
   <!-- stage 1: sense -->
   <g class="stage stage-sense">
-    <path d="M91 96 Q91 86 101 86 L124 86 132 76 Q136 71 142 72 L168 73 Q175 73 178 79 L183 86 201 87 Q210 87 210 97 L208 143 Q208 152 198 152 L102 151 Q92 151 92 142 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="150" cy="119" r="26" fill="#e8f0fe" stroke="#303640" stroke-width="3.5"/>
+    <path d="M91 96 Q91 86 101 86 L124 86 132 76 Q136 71 142 72 L168 73 Q175 73 178 79 L183 86 201 87 Q210 87 210 97 L208 143 Q208 152 198 152 L102 151 Q92 151 92 142 Z" fill="none" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="150" cy="119" r="26" fill="none" stroke="#303640" stroke-width="3.5"/>
     <circle cx="150" cy="119" r="14" fill="none" stroke="#4285f4" stroke-width="3.5"/>
     <circle cx="150" cy="119" r="5" fill="#4285f4">
       <animate attributeName="r" values="5;5;8;5;5" keyTimes="0;.07;.12;.18;1" dur="6s" repeatCount="indefinite"/>
@@ -48,7 +48,7 @@
 
   <!-- stage 2: perceive -->
   <g class="stage stage-think">
-    <path d="M404 82 Q404 75 412 75 L489 76 Q497 76 497 84 L496 146 Q496 153 488 153 L412 152 Q404 152 405 145 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M404 82 Q404 75 412 75 L489 76 Q497 76 497 84 L496 146 Q496 153 488 153 L412 152 Q404 152 405 145 Z" fill="none" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M393 91h12 M393 109h12 M393 128h12 M393 145h12 M496 91h12 M496 109h12 M496 128h12 M496 145h12 M417 64v12 M438 64v12 M460 64v12 M482 65v11 M417 153v12 M438 153v12 M460 153v12 M482 153v12" class="detail"/>
     <path d="M423 120 C431 94 444 139 451 111 S475 96 487 120" fill="none" stroke="#34a853" stroke-width="3.5" stroke-linecap="round">
       <animate attributeName="stroke-dasharray" values="0 150;0 150;150 0;150 0" keyTimes="0;.34;.52;1" dur="6s" repeatCount="indefinite"/>
@@ -72,11 +72,11 @@
 
   <!-- stage 3: act -->
   <g class="stage stage-act">
-    <path d="M703 139 Q706 112 720 100 Q744 89 777 97 Q793 106 799 139 Z" fill="#ffffff" stroke="#75569d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M703 139 Q706 112 720 100 Q744 89 777 97 Q793 106 799 139 Z" fill="none" stroke="#75569d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M725 99 V88 Q725 81 733 80 L770 81 Q778 81 779 89 V99" class="robot-ink"/>
     <path d="M735 80 Q751 74 770 81" class="robot-detail" opacity=".7"/>
-    <circle cx="723" cy="147" r="15" fill="#ddd0ec" stroke="#75569d" stroke-width="3.5"/>
-    <circle cx="779" cy="147" r="15" fill="#ddd0ec" stroke="#75569d" stroke-width="3.5"/>
+    <circle cx="723" cy="147" r="15" fill="none" stroke="#75569d" stroke-width="3.5"/>
+    <circle cx="779" cy="147" r="15" fill="none" stroke="#75569d" stroke-width="3.5"/>
     <circle cx="723" cy="147" r="5" fill="#a142f4"/>
     <circle cx="779" cy="147" r="5" fill="#a142f4"/>
     <circle cx="735" cy="116" r="4" fill="#a142f4"/>
