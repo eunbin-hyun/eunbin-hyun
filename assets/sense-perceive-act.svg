@@ -1,86 +1,108 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="title desc">
-  <title id="title">Sense, think, move</title>
-  <desc id="desc">A moving hand-drawn sketch of a camera, edge AI chip, and robot.</desc>
+  <title id="title">Sense, perceive, act</title>
+  <desc id="desc">A clean hand-drawn camera, edge AI chip, and robot respond in sequence.</desc>
 
   <defs>
+    <filter id="softShadow" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#3c4043" flood-opacity=".13"/>
+    </filter>
     <style>
-      .ink { fill:none; stroke:#263442; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
-      .thin { fill:none; stroke:#526575; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
-      .label { font-family:"Segoe Print","Comic Sans MS",cursive; font-weight:700; fill:#263442; }
-      .note { font-family:"Segoe Print","Comic Sans MS",cursive; fill:#61707d; }
-      .arrow { fill:none; stroke:#526575; stroke-width:3; stroke-linecap:round; stroke-dasharray:7 10; animation:dash 1s linear infinite; }
-      .camera { animation:cameraWiggle 2.8s ease-in-out infinite; transform-origin:150px 118px; }
-      .chip { animation:chipBreathe 2s ease-in-out infinite; transform-origin:450px 118px; }
-      .robot { animation:robotBob 1.25s ease-in-out infinite; transform-origin:750px 145px; }
-      .wheel { animation:wheel .85s linear infinite; transform-box:fill-box; transform-origin:center; }
-      .signal { animation:blink 1.1s ease-in-out infinite; }
-      .scribble { animation:blink .7s ease-in-out infinite alternate; }
-      @keyframes dash { to { stroke-dashoffset:-34; } }
-      @keyframes cameraWiggle { 0%,100% { transform:rotate(-.7deg); } 50% { transform:rotate(.9deg); } }
-      @keyframes chipBreathe { 0%,100% { transform:scale(.985); } 50% { transform:scale(1.025); } }
-      @keyframes robotBob { 0%,100% { transform:translateY(0) rotate(-.4deg); } 50% { transform:translateY(-5px) rotate(.5deg); } }
-      @keyframes wheel { to { transform:rotate(360deg); } }
-      @keyframes blink { 0%,100% { opacity:.25; } 50% { opacity:1; } }
+      .ink { fill:none; stroke:#303640; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }
+      .detail { fill:none; stroke:#67717e; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
+      .hand { font-family:"Segoe Print","Comic Sans MS",cursive; font-weight:700; fill:#303640; }
+      .caption { font-family:"Segoe UI",Arial,sans-serif; font-weight:600; fill:#7a838d; letter-spacing:1.2px; }
+      .stage { transform-box:fill-box; transform-origin:center; }
+      .stage-sense { animation:senseStep 6s cubic-bezier(.2,0,0,1) infinite; }
+      .stage-think { animation:thinkStep 6s cubic-bezier(.2,0,0,1) infinite; }
+      .stage-act { animation:actStep 6s cubic-bezier(.2,0,0,1) infinite; }
+      .halo-sense { animation:haloSense 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
+      .halo-think { animation:haloThink 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
+      .halo-act { animation:haloAct 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
+      .wheel { transform-box:fill-box; transform-origin:center; animation:wheel 6s cubic-bezier(.2,0,0,1) infinite; }
+      @keyframes senseStep { 0%,24%,100%{transform:translateY(0)} 7%,15%{transform:translateY(-4px)} }
+      @keyframes thinkStep { 0%,30%,58%,100%{transform:translateY(0)} 39%,49%{transform:translateY(-4px)} }
+      @keyframes actStep { 0%,64%,92%,100%{transform:translate(0,0)} 73%{transform:translate(4px,-3px)} 82%{transform:translate(8px,0)} }
+      @keyframes haloSense { 0%,25%,100%{opacity:0;transform:scale(.9)} 8%,16%{opacity:.75;transform:scale(1)} }
+      @keyframes haloThink { 0%,32%,58%,100%{opacity:0;transform:scale(.9)} 40%,49%{opacity:.75;transform:scale(1)} }
+      @keyframes haloAct { 0%,66%,92%,100%{opacity:0;transform:scale(.9)} 74%,83%{opacity:.75;transform:scale(1)} }
+      @keyframes wheel { 0%,68%{transform:rotate(0)} 86%,100%{transform:rotate(360deg)} }
       @media (prefers-reduced-motion:reduce) {
-        .arrow,.camera,.chip,.robot,.wheel,.signal,.scribble { animation:none; }
+        .stage,.halo-sense,.halo-think,.halo-act,.wheel { animation:none; }
       }
     </style>
   </defs>
 
-  <path d="M238 119 C270 104 307 105 340 119" class="arrow"/>
-  <path d="M331 110 l13 10 -14 8" class="thin"/>
-  <path d="M560 119 C592 104 625 105 657 119" class="arrow"/>
-  <path d="M648 110 l13 10 -14 8" class="thin"/>
+  <!-- quiet connector lines -->
+  <path d="M246 114 C282 106 316 106 352 114" fill="none" stroke="#d5d9df" stroke-width="4" stroke-linecap="round"/>
+  <path d="M548 114 C584 106 618 106 654 114" fill="none" stroke="#d5d9df" stroke-width="4" stroke-linecap="round"/>
+  <path d="M341 106 l13 8 -13 9" class="detail"/>
+  <path d="M643 106 l13 8 -13 9" class="detail"/>
 
-  <circle r="4.5" cy="116" fill="#eb7c4b">
-    <animate attributeName="cx" values="244;337;244" keyTimes="0;.88;1" dur="1.8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0" keyTimes="0;.2;1" dur="1.8s" repeatCount="indefinite"/>
+  <!-- data packets: one restrained, sequential loop -->
+  <circle r="5" cy="111" fill="#4285f4">
+    <animate attributeName="cx" values="248;248;349;349" keyTimes="0;.14;.34;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.14;.34;1" dur="6s" repeatCount="indefinite"/>
   </circle>
-  <circle r="4.5" cy="116" fill="#3a9b77">
-    <animate attributeName="cx" values="565;653;565" keyTimes="0;.88;1" dur="1.8s" begin=".45s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0" keyTimes="0;.2;1" dur="1.8s" begin=".45s" repeatCount="indefinite"/>
+  <circle r="5" cy="111" fill="#34a853">
+    <animate attributeName="cx" values="550;550;651;651" keyTimes="0;.48;.68;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.48;.68;1" dur="6s" repeatCount="indefinite"/>
   </circle>
 
-  <g class="camera">
-    <path d="M83 88 Q82 78 94 77 L119 77 128 66 Q131 62 137 63 L171 64 Q177 64 180 69 L187 78 207 79 Q219 80 220 91 L218 147 Q218 157 207 158 L94 157 Q83 157 82 146 Z" fill="#fff8ee" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M89 91 Q149 85 214 91" class="thin" opacity=".75"/>
-    <circle cx="151" cy="118" r="30" fill="#edf8fb" stroke="#263442" stroke-width="4"/>
-    <circle cx="151" cy="118" r="18" fill="none" stroke="#2f83a5" stroke-width="4"/>
-    <circle cx="151" cy="118" r="6" fill="#2f83a5" class="signal"/>
-    <path d="M111 73 q8-14 17-2" class="thin"/>
-    <path d="M101 167 q47 8 99-1" class="thin" opacity=".55"/>
-  </g>
-  <text x="150" y="55" text-anchor="middle" class="label" font-size="18">sense</text>
-  <text x="150" y="185" text-anchor="middle" class="note" font-size="12">camera + sensors</text>
-
-  <g class="chip">
-    <path d="M390 78 Q390 69 400 68 L501 69 Q510 69 510 79 L508 153 Q508 162 499 163 L400 161 Q390 161 391 152 Z" fill="#f0faf4" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M374 88 l17 1 M373 108 l18 1 M374 130 l17 0 M374 150 l17 0 M509 89 l17-1 M509 109 l18 0 M509 131 l17 1 M508 151 l18 1" class="thin"/>
-    <path d="M407 58 l1 11 M431 57 l0 12 M455 58 l0 11 M480 57 l-1 12 M502 59 l-1 10 M408 162 l0 12 M431 162 l1 12 M455 162 l0 12 M479 162 l1 12 M500 162 l0 12" class="thin"/>
-    <path d="M416 118 C426 91 443 143 451 111 S479 93 492 118" fill="none" stroke="#248a63" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="417" cy="118" r="4" fill="#248a63" class="signal"/>
-    <circle cx="451" cy="111" r="4" fill="#248a63" class="signal" style="animation-delay:.3s"/>
-    <circle cx="492" cy="118" r="4" fill="#248a63" class="signal" style="animation-delay:.6s"/>
-  </g>
-  <text x="450" y="48" text-anchor="middle" class="label" font-size="18">think</text>
-  <text x="450" y="193" text-anchor="middle" class="note" font-size="12">edge AI + ROS 2</text>
-
-  <g class="robot">
-    <path d="M695 137 Q699 102 711 88 Q733 78 775 85 Q794 91 804 136 Z" fill="#f6f1ff" stroke="#263442" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M718 88 L718 70 Q718 63 726 63 L770 63 Q778 63 779 71 L779 87" class="ink"/>
-    <path d="M748 63 L748 49" class="ink"/>
-    <circle cx="748" cy="45" r="6" fill="#8b62c9" stroke="#263442" stroke-width="2">
-      <animate attributeName="opacity" values=".3;1;.3" dur="1.1s" repeatCount="indefinite"/>
+  <!-- stage 1: sense -->
+  <g class="stage stage-sense">
+    <ellipse class="halo-sense" cx="150" cy="113" rx="100" ry="82" fill="#d2e3fc"/>
+    <rect x="67" y="45" width="166" height="136" rx="42" fill="#e8f0fe" filter="url(#softShadow)"/>
+    <path d="M91 96 Q91 86 101 86 L124 86 132 76 Q136 71 142 72 L168 73 Q175 73 178 79 L183 86 201 87 Q210 87 210 97 L208 143 Q208 152 198 152 L102 151 Q92 151 92 142 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="150" cy="119" r="26" fill="#e8f0fe" stroke="#303640" stroke-width="3.5"/>
+    <circle cx="150" cy="119" r="14" fill="none" stroke="#4285f4" stroke-width="3.5"/>
+    <circle cx="150" cy="119" r="5" fill="#4285f4">
+      <animate attributeName="r" values="5;5;8;5;5" keyTimes="0;.07;.12;.18;1" dur="6s" repeatCount="indefinite"/>
     </circle>
-    <circle class="wheel" cx="719" cy="145" r="17" fill="#fffdf7" stroke="#263442" stroke-width="4" stroke-dasharray="7 4"/>
-    <circle class="wheel" cx="779" cy="145" r="17" fill="#fffdf7" stroke="#263442" stroke-width="4" stroke-dasharray="7 4"/>
-    <path d="M724 112 q24-18 50 0" class="thin"/>
-    <circle cx="731" cy="106" r="4" fill="#8b62c9"/>
-    <circle cx="768" cy="106" r="4" fill="#8b62c9"/>
-    <path d="M810 119 q16-8 25 0 M812 130 q18-5 28 4" class="thin scribble"/>
+    <path d="M109 82 q7-11 15-2" class="detail"/>
   </g>
-  <text x="750" y="48" text-anchor="middle" class="label" font-size="18">move!</text>
-  <text x="750" y="190" text-anchor="middle" class="note" font-size="12">robot motion</text>
+  <text x="150" y="30" text-anchor="middle" class="hand" font-size="19">sense</text>
+  <text x="150" y="211" text-anchor="middle" class="caption" font-size="11">CAMERA · SENSOR</text>
 
-  <path d="M272 77 q13-12 25 0 M594 75 q13-12 25 0" class="thin scribble" opacity=".6"/>
+  <!-- stage 2: perceive -->
+  <g class="stage stage-think">
+    <ellipse class="halo-think" cx="450" cy="113" rx="100" ry="82" fill="#ceead6"/>
+    <rect x="367" y="45" width="166" height="136" rx="42" fill="#e6f4ea" filter="url(#softShadow)"/>
+    <path d="M404 82 Q404 75 412 75 L489 76 Q497 76 497 84 L496 146 Q496 153 488 153 L412 152 Q404 152 405 145 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M393 91h12 M393 109h12 M393 128h12 M393 145h12 M496 91h12 M496 109h12 M496 128h12 M496 145h12 M417 64v12 M438 64v12 M460 64v12 M482 65v11 M417 153v12 M438 153v12 M460 153v12 M482 153v12" class="detail"/>
+    <path d="M423 120 C431 94 444 139 451 111 S475 96 487 120" fill="none" stroke="#34a853" stroke-width="3.5" stroke-linecap="round">
+      <animate attributeName="stroke-dasharray" values="0 150;0 150;150 0;150 0" keyTimes="0;.34;.52;1" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="423" cy="120" r="4" fill="#34a853">
+      <animate attributeName="opacity" values=".25;.25;1;.25;.25" keyTimes="0;.35;.39;.53;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="451" cy="111" r="4" fill="#34a853">
+      <animate attributeName="opacity" values=".25;.25;1;.25;.25" keyTimes="0;.39;.43;.53;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="487" cy="120" r="4" fill="#34a853">
+      <animate attributeName="opacity" values=".25;.25;1;.25;.25" keyTimes="0;.43;.47;.53;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="450" y="30" text-anchor="middle" class="hand" font-size="19">perceive</text>
+  <text x="450" y="211" text-anchor="middle" class="caption" font-size="11">EDGE AI · ROS 2</text>
+
+  <!-- stage 3: act -->
+  <g class="stage stage-act">
+    <ellipse class="halo-act" cx="750" cy="113" rx="100" ry="82" fill="#e4d7f5"/>
+    <rect x="667" y="45" width="166" height="136" rx="42" fill="#f3e8fd" filter="url(#softShadow)"/>
+    <path d="M703 141 Q707 109 718 96 Q741 88 777 95 Q794 102 799 140 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M725 96 V81 Q725 74 733 74 H770 Q778 74 779 82 V96 M751 74V61" class="ink"/>
+    <circle cx="751" cy="58" r="5" fill="#a142f4">
+      <animate attributeName="opacity" values=".35;.35;1;.35;.35" keyTimes="0;.69;.74;.84;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="wheel" cx="725" cy="148" r="15" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-dasharray="7 4"/>
+    <circle class="wheel" cx="779" cy="148" r="15" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-dasharray="7 4"/>
+    <circle cx="735" cy="116" r="4" fill="#a142f4"/>
+    <circle cx="770" cy="116" r="4" fill="#a142f4"/>
+    <path d="M740 128 q12 7 24 0" class="detail"/>
+    <path d="M808 119 q14-6 23 1 M809 131 q16-3 25 4" class="detail">
+      <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.7;.78;.9;1" dur="6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <text x="750" y="30" text-anchor="middle" class="hand" font-size="19">act!</text>
+  <text x="750" y="211" text-anchor="middle" class="caption" font-size="11">ROBOT MOTION</text>
 </svg>
