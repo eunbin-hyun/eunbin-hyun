@@ -18,16 +18,16 @@
       .halo-sense { animation:haloSense 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
       .halo-think { animation:haloThink 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
       .halo-act { animation:haloAct 6s cubic-bezier(.2,0,0,1) infinite; transform-box:fill-box; transform-origin:center; }
-      .wheel { transform-box:fill-box; transform-origin:center; animation:wheel 6s cubic-bezier(.2,0,0,1) infinite; }
+      .robot-ink { fill:none; stroke:#75569d; stroke-width:3.5; stroke-linecap:round; stroke-linejoin:round; }
+      .robot-detail { fill:none; stroke:#9678b7; stroke-width:2.3; stroke-linecap:round; stroke-linejoin:round; }
       @keyframes senseStep { 0%,24%,100%{transform:translateY(0)} 7%,15%{transform:translateY(-4px)} }
       @keyframes thinkStep { 0%,30%,58%,100%{transform:translateY(0)} 39%,49%{transform:translateY(-4px)} }
       @keyframes actStep { 0%,64%,92%,100%{transform:translate(0,0)} 73%{transform:translate(4px,-3px)} 82%{transform:translate(8px,0)} }
       @keyframes haloSense { 0%,25%,100%{opacity:0;transform:scale(.9)} 8%,16%{opacity:.75;transform:scale(1)} }
       @keyframes haloThink { 0%,32%,58%,100%{opacity:0;transform:scale(.9)} 40%,49%{opacity:.75;transform:scale(1)} }
       @keyframes haloAct { 0%,66%,92%,100%{opacity:0;transform:scale(.9)} 74%,83%{opacity:.75;transform:scale(1)} }
-      @keyframes wheel { 0%,68%{transform:rotate(0)} 86%,100%{transform:rotate(360deg)} }
       @media (prefers-reduced-motion:reduce) {
-        .stage,.halo-sense,.halo-think,.halo-act,.wheel { animation:none; }
+        .stage,.halo-sense,.halo-think,.halo-act { animation:none; }
       }
     </style>
   </defs>
@@ -37,16 +37,6 @@
   <path d="M548 114 C584 106 618 106 654 114" fill="none" stroke="#d5d9df" stroke-width="4" stroke-linecap="round"/>
   <path d="M341 106 l13 8 -13 9" class="detail"/>
   <path d="M643 106 l13 8 -13 9" class="detail"/>
-
-  <!-- data packets: one restrained, sequential loop -->
-  <circle r="5" cy="111" fill="#4285f4">
-    <animate attributeName="cx" values="248;248;349;349" keyTimes="0;.14;.34;1" dur="6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.14;.34;1" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  <circle r="5" cy="111" fill="#34a853">
-    <animate attributeName="cx" values="550;550;651;651" keyTimes="0;.48;.68;1" dur="6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.48;.68;1" dur="6s" repeatCount="indefinite"/>
-  </circle>
 
   <!-- stage 1: sense -->
   <g class="stage stage-sense">
@@ -100,17 +90,17 @@
     <ellipse class="halo-act" cx="750" cy="113" rx="100" ry="82" fill="#e4d7f5"/>
     <path d="M702 46 C679 47 666 65 668 89 L670 146 C671 168 689 181 712 180 L798 179 C821 178 834 160 831 138 L829 80 C828 58 811 45 788 46 Z" fill="#f3e8fd" filter="url(#softShadow)"/>
     <path d="M702 46 C679 47 666 65 668 89 L670 146 C671 168 689 181 712 180 L798 179 C821 178 834 160 831 138 L829 80 C828 58 811 45 788 46 Z" fill="none" stroke="#a142f4" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".18" transform="translate(2 1)"/>
-    <path d="M703 141 Q707 109 718 96 Q741 88 777 95 Q794 102 799 140 Z" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M725 96 V81 Q725 74 733 74 H770 Q778 74 779 82 V96 M751 74V61" class="ink"/>
-    <circle cx="751" cy="58" r="5" fill="#a142f4">
-      <animate attributeName="opacity" values=".35;.35;1;.35;.35" keyTimes="0;.69;.74;.84;1" dur="6s" repeatCount="indefinite"/>
-    </circle>
-    <circle class="wheel" cx="725" cy="148" r="15" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-dasharray="7 4"/>
-    <circle class="wheel" cx="779" cy="148" r="15" fill="#ffffff" stroke="#303640" stroke-width="3.5" stroke-dasharray="7 4"/>
+    <path d="M703 139 Q706 112 720 100 Q744 89 777 97 Q793 106 799 139 Z" fill="#ffffff" stroke="#75569d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M725 99 V88 Q725 81 733 80 L770 81 Q778 81 779 89 V99" class="robot-ink"/>
+    <path d="M735 80 Q751 74 770 81" class="robot-detail" opacity=".7"/>
+    <circle cx="723" cy="147" r="15" fill="#ddd0ec" stroke="#75569d" stroke-width="3.5"/>
+    <circle cx="779" cy="147" r="15" fill="#ddd0ec" stroke="#75569d" stroke-width="3.5"/>
+    <circle cx="723" cy="147" r="5" fill="#a142f4"/>
+    <circle cx="779" cy="147" r="5" fill="#a142f4"/>
     <circle cx="735" cy="116" r="4" fill="#a142f4"/>
     <circle cx="770" cy="116" r="4" fill="#a142f4"/>
-    <path d="M740 128 q12 7 24 0" class="detail"/>
-    <path d="M808 119 q14-6 23 1 M809 131 q16-3 25 4" class="detail">
+    <path d="M740 128 q12 7 24 0" class="robot-detail"/>
+    <path d="M808 119 q14-6 23 1 M809 131 q16-3 25 4" class="robot-detail">
       <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.7;.78;.9;1" dur="6s" repeatCount="indefinite"/>
     </path>
     <path d="M707 169 q42 6 87-1" fill="none" stroke="#a142f4" stroke-width="2" stroke-linecap="round" stroke-opacity=".28"/>
@@ -118,6 +108,6 @@
       <animate attributeName="opacity" values=".15;.15;.65;.15;.15" keyTimes="0;.67;.77;.9;1" dur="6s" repeatCount="indefinite"/>
     </path>
   </g>
-  <text x="750" y="30" text-anchor="middle" class="hand" font-size="19">act!</text>
+  <text x="750" y="30" text-anchor="middle" class="hand" font-size="19" style="fill:#75569d">act!</text>
   <text x="750" y="211" text-anchor="middle" class="caption" font-size="11">ROBOT MOTION</text>
 </svg>
