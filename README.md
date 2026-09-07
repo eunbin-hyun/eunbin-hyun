@@ -95,6 +95,8 @@
 ## 추가 프로젝트
 
 - **[SafePro+ ↗](https://github.com/eunbin-hyun/Worker_Safety_AI)** — MediaPipe·LSTM 자세 인식과 YOLOv8 안전모 탐지를 결합한 노동자 안전관리 프로토타입 · 6인 팀 · 담당: 프론트엔드, 아이디어 기획·발표, AI 구조 제안
+- **Arduino Line Tracer** — 적외선·초음파 센서와 서보모터를 활용한 라인 추적·장애물 회피 로봇 · 담당: 모터 제어 및 센서 기반 주행 로직 · 팀 2위
+- **MATLAB Audio Similarity Analysis** — 원곡 음원과 실제·모창 가수의 유사도를 상관계수·RMSE·PSNR로 비교한 디지털신호처리 프로젝트 · 담당: 프로젝트 기획 총괄 및 PSNR 분석
 
 ## 제가 맡아 온 일
 
