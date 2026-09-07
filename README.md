@@ -6,6 +6,10 @@
 </p>
 
 <p align="center">
+  <img src="./assets/sense-perceive-act.svg" width="820" alt="센서 입력이 엣지 AI 추론을 거쳐 로봇 동작으로 이어지는 애니메이션" />
+</p>
+
+<p align="center">
   <a href="./RESUME.md"><strong>이력서 보기</strong></a>
   &nbsp;·&nbsp;
   <a href="https://github.com/eunbin-hyun?tab=repositories"><strong>전체 저장소</strong></a>
