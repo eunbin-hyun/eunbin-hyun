@@ -21,6 +21,7 @@
 
 <p align="center">
   <strong>Robotics · Edge</strong><br />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" height="28" />
   <img src="https://img.shields.io/badge/ROS%202-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS 2" height="28" />
   <img src="https://img.shields.io/badge/Jetson-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA Jetson" height="28" />
   <img src="https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi" height="28" />
@@ -39,16 +40,15 @@
 <p align="center">
   <strong>Simulation · 3D Design</strong><br />
   <img src="https://img.shields.io/badge/RoboDK-1F2937?style=for-the-badge" alt="RoboDK" height="28" />
-  <img src="https://img.shields.io/badge/Onshape-1B5FAA?style=for-the-badge&logo=onshape&logoColor=white" alt="Onshape" height="28" />
+  <img src="https://img.shields.io/badge/Onshape-8DC63F?style=for-the-badge&logo=onshape&logoColor=white" alt="Onshape" height="28" />
 </p>
 
 <p align="center">
   <strong>Development · Analysis</strong><br />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" height="28" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" height="28" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=111111" alt="Linux" height="28" />
   <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira" height="28" />
-  <img src="https://img.shields.io/badge/MATLAB-E95420?style=for-the-badge" alt="MATLAB" height="28" />
+  <img src="https://img.shields.io/badge/MATLAB-D62728?style=for-the-badge" alt="MATLAB" height="28" />
 </p>
 
 ## 대표 프로젝트
