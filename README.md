@@ -42,6 +42,7 @@
   <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira" height="28" />
   <img src="https://img.shields.io/badge/MATLAB-E95420?style=for-the-badge" alt="MATLAB" height="28" />
   <img src="https://img.shields.io/badge/RoboDK-1F2937?style=for-the-badge" alt="RoboDK" height="28" />
+  <img src="https://img.shields.io/badge/Onshape-1B5FAA?style=for-the-badge&logo=onshape&logoColor=white" alt="Onshape" height="28" />
   <img src="https://img.shields.io/badge/Hailo--8L-00AEEF?style=for-the-badge" alt="Hailo-8L" height="28" />
 </p>
 
@@ -95,8 +96,8 @@
 ## 추가 프로젝트
 
 - **[SafePro+ ↗](https://github.com/eunbin-hyun/Worker_Safety_AI)** — MediaPipe·LSTM 자세 인식과 YOLOv8 안전모 탐지를 결합한 노동자 안전관리 프로토타입 · 6인 팀 · 담당: 프론트엔드, 아이디어 기획·발표, AI 구조 제안
-- **Arduino Line Tracer** — 적외선·초음파 센서와 서보모터를 활용한 라인 추적·장애물 회피 로봇 · 담당: 모터 제어 및 센서 기반 주행 로직 · 팀 2위
-- **MATLAB Audio Similarity Analysis** — 원곡 음원과 실제·모창 가수의 유사도를 상관계수·RMSE·PSNR로 비교한 디지털신호처리 프로젝트 · 담당: 프로젝트 기획 총괄 및 PSNR 분석
+- **[Arduino Line Tracer ↗](https://github.com/eunbin-hyun/Arduino_Line_Tracer)** — 적외선·초음파 센서와 서보모터를 활용한 라인 추적·장애물 회피 로봇 · 담당: 모터 제어 및 센서 기반 주행 로직 · 팀 2위
+- **[MATLAB Audio Similarity Analysis ↗](https://github.com/eunbin-hyun/MATLAB_Audio_Similarity_Analysis)** — 원곡 음원과 실제·모창 가수의 유사도를 상관계수·RMSE·PSNR로 비교한 디지털신호처리 프로젝트 · 담당: 프로젝트 기획 총괄 및 PSNR 분석
 
 ## 제가 맡아 온 일
 
