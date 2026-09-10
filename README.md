@@ -116,7 +116,8 @@
 
 | 연도 | 구분 | 내용 |
 |---|---|---|
-| 2025 | 논문 | 한국전기전자학회 하계학술대회 제1저자 — [야간 및 악천후 환경에서의 딥러닝 기반 실시간 차선 인식 시스템 ↗](https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation/tree/main/docs) |
+| 2025 | 학술대회 | 한국전기전자학회 하계학술대회 제1저자 발표 — [야간 및 악천후 환경에서의 딥러닝 기반 실시간 차선 인식 시스템 ↗](https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation/tree/main/docs/raspberry-pi) |
+| 2025 | 학술대회 | 제27회 전자정보통신 학술대회 제1저자 발표 — [야간 및 악천후 환경에서의 차선 인식용 세그멘테이션 모델 비교 ↗](https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation/tree/main/docs/jetson-orin-nano) |
 | 2025 | 수상 | 2025-1학기 캡스톤디자인 결과발표회 우수상 |
 | 2025 | 특허 | [감귤 병충해 실시간 진단 및 예방 장치 ↗](https://github.com/eunbin-hyun/tangerine_pests_AI/tree/main/docs) 출원 (`10-2025-0016861`) |
 | 2024 | 수상 | 제32회 설계 및 팀프로젝트 작품전시회 최우수상 |
