@@ -55,6 +55,23 @@
 
 <table>
   <tr>
+    <td colspan="2" valign="top">
+      <sub>3D AI · VR / 2026.08–09 · 7인 팀</sub>
+      <h3><a href="https://github.com/eunbin-hyun/BONDI">BONDI ↗</a></h3>
+      <p><strong>AI 유물 복원 VR 박물관</strong></p>
+      <p align="center">
+        <a href="https://github.com/eunbin-hyun/BONDI">
+          <img src="https://github.com/eunbin-hyun/BONDI/blob/master/docs/images/bondi-vr-demo.gif?raw=true" width="760" alt="VR 박물관에서 손상된 굽다리바리의 형상이 복원되는 장면" />
+        </a>
+      </p>
+      <p>사진에서 생성한 훼손 유물 3D의 결손 형상을 복원하고, 손상·복원 상태를 실제 크기의 VR 박물관에서 비교하는 체험형 프로젝트입니다.</p>
+      <p><strong>담당:</strong> AdaPoinTr 점군 완성 · 회전 TTA · 메시화 · 관측부와 AI 추정부 분리</p>
+      <p><code>PyTorch</code> · <code>AdaPoinTr</code> · <code>Point Cloud</code> · <code>Blender</code> · <code>Unreal Engine 5</code></p>
+      <p>형상 단위 분할 <strong>19개·2,280쌍</strong> · 깊은 결손 구간 F-score <strong>0.026 → 0.918</strong></p>
+      <p><a href="https://github.com/eunbin-hyun/BONDI/blob/master/docs/AI_RESTORATION.md">형상 복원 설계와 검증 보기 ↗</a></p>
+    </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <sub>AUTONOMOUS ROBOT · ROS 2 / 2026.07–08 · 6인 팀</sub>
       <h3><a href="https://github.com/eunbin-hyun/AprilTag_Nav_Security_Robot">SSACURITY ↗</a></h3>
