@@ -105,6 +105,7 @@
       <p><strong>담당:</strong> AdaPoinTr 점군 완성 · 회전 TTA · 메시화 · 관측부와 AI 추정부 분리</p>
       <p><code>PyTorch</code> · <code>AdaPoinTr</code> · <code>Point Cloud</code> · <code>Blender</code> · <code>Unreal Engine 5</code></p>
       <p>형상 단위 분할 <strong>19개·2,280쌍</strong> · 깊은 결손 구간 F-score <strong>0.026 → 0.918</strong></p>
+      <p><strong>2026 SSAFY 특화 프로젝트 우수상</strong> · 광주 2반 2등</p>
       <p><a href="https://github.com/eunbin-hyun/BONDI/blob/master/docs/AI_RESTORATION.md">형상 복원 설계와 검증 보기 ↗</a></p>
     </td>
   </tr>
@@ -128,6 +129,7 @@
 
 | 연도 | 구분 | 내용 |
 |---|---|---|
+| 2026 | 수상 | SSAFY 15기 2학기 특화 프로젝트 우수상 — BONDI (광주 2반 2등) |
 | 2025 | 학술대회 | 한국전기전자학회 하계학술대회 제1저자 발표 — [야간 및 악천후 환경에서의 딥러닝 기반 실시간 차선 인식 시스템 ↗](https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation/tree/main/docs/raspberry-pi) |
 | 2025 | 학술대회 | 제27회 전자정보통신 학술대회 제1저자 발표 — [야간 및 악천후 환경에서의 차선 인식용 세그멘테이션 모델 비교 ↗](https://github.com/eunbin-hyun/Night_Rain_Lane_Segmentation/tree/main/docs/jetson-orin-nano) |
 | 2025 | 수상 | 2025-1학기 캡스톤디자인 결과발표회 우수상 |
