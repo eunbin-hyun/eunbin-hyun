@@ -53,26 +53,39 @@
 
 ## 대표 프로젝트
 
+SSAFY 프로젝트는 아래 공개 소개 문서에서 개요·담당 영역·시연을 볼 수 있습니다. 원본 코드 저장소는 비공개로 관리합니다.
+
 <table>
+  <tr>
+    <td colspan="2" valign="top">
+      <sub>TACTILE ROBOTICS · PC INTEGRATION / 2026.10–11 · 6인 팀</sub>
+      <h3><a href="./projects/Tac-Touch.md">Tac-Touch ↗</a></h3>
+      <p><strong>촉각센서와 그리퍼를 잇는 PC 통신·실행 관리</strong></p>
+      <p>센서·감지·제어·GUI의 공통 데이터 계약과 Gateway를 설계하고, 시나리오 실행 관리와 ROS 그리퍼 연결을 구현했습니다.</p>
+      <p><strong>담당:</strong> Gateway · 공용 API · PC 통합 · 메인 런처 · 시나리오 실행 관리</p>
+      <p><code>Python</code> · <code>WebSocket</code> · <code>USB Serial</code> · <code>ROS 2</code></p>
+      <p><a href="./projects/Tac-Touch.md">프로젝트 소개와 개인 기여 보기 ↗</a></p>
+    </td>
+  </tr>
   <tr>
     <td width="50%" valign="top">
       <sub>AUTONOMOUS ROBOT · ROS 2 / 2026.07–08 · 6인 팀</sub>
-      <h3><a href="https://github.com/eunbin-hyun/AprilTag_Nav_Security_Robot">SSACURITY ↗</a></h3>
+      <h3><a href="./projects/SSACURITY.md">SSACURITY ↗</a></h3>
       <p><strong>AprilTag 기반 셔틀 승강장 보안 로봇</strong></p>
       <p>Jetson에서 AprilTag 위치 추정과 왕복 경로 상태머신을 구현하고 STM32 UART·관제 WebSocket을 연결했습니다.</p>
       <p><strong>담당:</strong> Jetson · AprilTag 자율주행 · 관제 연동</p>
       <p><code>ROS 2</code> · <code>Jetson</code> · <code>AprilTag</code> · <code>UART</code></p>
-      <p>핵심 순수 로직 테스트 <strong>243 passed</strong> · 폐루프 E2E <strong>5/5</strong></p>
-      <p><a href="https://github.com/eunbin-hyun/AprilTag_Nav_Security_Robot/tree/main/hardware/jetson/ros2_ws">Jetson 구현 보기 ↗</a></p>
+      <p>기존 검증 기록: 핵심 순수 로직 <strong>243 passed</strong> · 모의 폐루프 E2E <strong>5/5</strong></p>
+      <p><a href="./projects/SSACURITY.md">자율주행 설계와 검증 범위 보기 ↗</a></p>
     </td>
     <td width="50%" valign="top">
       <sub>SMART FACTORY · DIGITAL TWIN / 2026.06 · 2인 팀</sub>
-      <h3><a href="https://github.com/SSAFY-15th-HK/AQIS-for-SmartFactory">AQIS ↗</a></h3>
+      <h3><a href="./projects/AQIS.md">AQIS ↗</a></h3>
       <p><strong>AI 품질 검사 스마트팩토리</strong></p>
       <p>RoboDK 디지털 트윈과 Simulation Dashboard를 만들고, 3D 설계·Roboflow 데이터·YOLO 학습을 담당했습니다.</p>
       <p><strong>담당:</strong> Simulation · AI · 3D</p>
       <p><code>RoboDK</code> · <code>YOLOv5</code> · <code>Onshape</code> · <code>React</code></p>
-      <p><a href="https://github.com/SSAFY-15th-HK/AQIS-for-SmartFactory/tree/main/AQIS-sim">시뮬레이션 구현 보기 ↗</a></p>
+      <p><a href="./projects/AQIS.md">시뮬레이션·AI 기여와 시연 보기 ↗</a></p>
     </td>
   </tr>
   <tr>
@@ -99,14 +112,14 @@
   <tr>
     <td colspan="2" valign="top">
       <sub>3D AI · VR / 2026.08–09 · 7인 팀</sub>
-      <h3><a href="https://github.com/eunbin-hyun/BONDI">BONDI ↗</a></h3>
+      <h3><a href="./projects/BONDI.md">BONDI ↗</a></h3>
       <p><strong>AI 유물 복원 VR 박물관</strong></p>
       <p>사진에서 생성한 훼손 유물 3D의 결손 형상을 복원하고, 손상·복원 상태를 실제 크기의 VR 박물관에서 비교하는 체험형 프로젝트입니다.</p>
       <p><strong>담당:</strong> AdaPoinTr 점군 완성 · 회전 TTA · 메시화 · 관측부와 AI 추정부 분리</p>
       <p><code>PyTorch</code> · <code>AdaPoinTr</code> · <code>Point Cloud</code> · <code>Blender</code> · <code>Unreal Engine 5</code></p>
       <p>형상 단위 분할 <strong>19개·2,280쌍</strong> · 깊은 결손 구간 F-score <strong>0.026 → 0.918</strong></p>
       <p><strong>2026 SSAFY 특화 프로젝트 우수상</strong> · 광주 2반 2등</p>
-      <p><a href="https://github.com/eunbin-hyun/BONDI/blob/master/docs/AI_RESTORATION.md">형상 복원 설계와 검증 보기 ↗</a></p>
+      <p><a href="./projects/BONDI.md">형상 복원 설계와 검증 보기 ↗</a></p>
     </td>
   </tr>
 </table>

@@ -19,9 +19,37 @@ Physical AI · Autonomous Robot · Edge Computer Vision
 
 ## 프로젝트
 
+### Tac-Touch — 촉각센서·그리퍼 PC 통합
+
+2026.10–11 · SSAFY 15기 자율 프로젝트 · 6명 · [프로젝트 소개](projects/Tac-Touch.md)
+
+**담당: Gateway · 공용 API · PC 통합 · 메인 런처 · 시나리오 실행 관리**
+
+- 센서·감지·제어·GUI의 공통 데이터 계약과 통신 경계 설계
+- 시리얼 수신·CSV 파싱과 WebSocket Gateway 구현
+- 호출자 권한·요청 범위·중복·만료 처리와 접속 상태 복원
+- 런처·시나리오의 준비·실행·종료와 장비 예약·단절 관리
+- ROS 그리퍼 상태·명령 연결, 모의 시험과 제한된 실물 확인 범위 구분
+
+`Python` · `WebSocket` · `USB Serial` · `ROS 2`
+
+### BONDI — AI 유물 복원 VR 박물관
+
+2026.08–09 · SSAFY 15기 특화 프로젝트 · 7명 · [프로젝트 소개](projects/BONDI.md)
+
+**담당: AdaPoinTr 형상 복원 · 데이터·평가 · TTA · 메시화**
+
+- 합성 결손 학습 데이터와 형상 단위 학습·평가 분할 구성
+- AdaPoinTr 파인튜닝과 회전 TTA로 결손 형상 추정
+- 평가 누출 수정과 결손부 중심 지표 비교
+- 관측부와 AI 생성 면을 분리하는 메시화 구현
+- 2026 SSAFY 특화 프로젝트 우수상 · 광주 2반 2등
+
+`PyTorch` · `AdaPoinTr` · `Point Cloud` · `Blender`
+
 ### SSACURITY — AprilTag 기반 자율주행 보안 로봇
 
-2026.07–2026.08 · SSAFY 15기 공통 프로젝트 · [Repository](https://github.com/eunbin-hyun/AprilTag_Nav_Security_Robot)
+2026.07–2026.08 · SSAFY 15기 공통 프로젝트 · [프로젝트 소개](projects/SSACURITY.md)
 
 **담당: Jetson · AprilTag 자율주행 · 관제 연동**
 
@@ -30,13 +58,13 @@ Physical AI · Autonomous Robot · Edge Computer Vision
 - 일시 태그 손실, 최대 주행거리·시간 상한, FAULT latch와 HOLD 복귀 등 안전 상태 설계
 - Jetson–STM32 UART V3 프레임, CRC, 스트림 파서와 가상 STM32 기반 검증 환경 구성
 - 실제 카메라·차량 없이 동작하는 closed-loop course simulator 구축
-- ROS 비의존 핵심 로직 테스트 243개 통과, 폐루프 E2E 시나리오 5/5 통과
+- 기존 검증 기록: ROS 비의존 핵심 로직 테스트 243개 통과, 모의 폐루프 E2E 시나리오 5/5 통과
 
 `ROS 2 Humble` · `Jetson Orin Nano` · `AprilTag` · `OpenCV` · `STM32` · `UART` · `WebSocket`
 
 ### AQIS for SmartFactory — AI 품질 검사 스마트팩토리
 
-2026.06 · 4주 · SSAFY 15기 광주 4반 3조 · [Repository](https://github.com/SSAFY-15th-HK/AQIS-for-SmartFactory)
+2026.06 · 4주 · SSAFY 15기 광주 4반 3조 · [프로젝트 소개](projects/AQIS.md)
 
 **담당: Simulation · AI · 3D**
 
